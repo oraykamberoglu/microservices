@@ -60,7 +60,7 @@ services:
      - discovery-server
     entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
     ports:
-     - 8080:8080
+     - 8085:8080
 
   tracing-server:
     image: openzipkin/zipkin
